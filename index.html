@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Romântica</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            background: url('https://wallpapers.com/images/hd/romantic-background-3yh5ffy8v9ejrfqu.jpg') no-repeat center center/cover;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff5042;
+        }
+
+        /* Estilo para a caixa de diálogo */
+        .dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .dialog p {
+            font-size: 20px;
+            color: #333;
+            margin: 0 0 20px;
+        }
+
+        .dialog button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .dialog button:hover {
+            background-color: #ff5042;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="romanticButton">Clique aqui</button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="dialog" id="dialog">
+        <p>Você é muito especial para mim</p>
+        <button id="closeDialog">Fechar</button>
+    </div>
+
+    <script>
+        document.getElementById('romanticButton').addEventListener('click', function() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('dialog').style.display = 'block';
+        });
+
+        document.getElementById('closeDialog').addEventListener('click', function() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('dialog').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
